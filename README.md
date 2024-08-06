@@ -43,6 +43,6 @@ go run main.go router get --url "http://localhost:4000/example/login"
 
 The following features are planned for future releases:
 
-- Support for GET method with additional parameters like headers.
+- Support for all HTTP methods with additional parameters like headers.
 - Implementation of DELETE request.
 - Ability to send UPDATE request.
