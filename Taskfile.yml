@@ -1,0 +1,8 @@
+version: "3"
+tasks:
+  build:
+    cmds:
+      - go build -o bin/app.exe main.go
+  run:
+    cmds:
+      - ./bin/http.exe
