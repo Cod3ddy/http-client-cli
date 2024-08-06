@@ -18,31 +18,6 @@ var (
 	data string
 )
 
-// func makePostRequest(cmd *cobra.Command, args []string) {
-// 	url := args[0]
-// 	fmt.Println(args[1])
-// 	data, err := common.ConvertToJSON(args[1])
-
-// 	if err != nil {
-// 		fmt.Println(err)
-// 		return
-// 	}
-
-// 	dataReader := strings.NewReader(data)
-
-// 	response, err := http.Post(url, "application/json", dataReader)
-// 	if err != nil {
-// 		fmt.Println(err)
-// 	}
-
-// 	defer response.Body.Close()
-
-// 	body, _ := io.ReadAll(response.Body)
-// 	fmt.Println(string(body))
-
-// }
-
-// postCmd represents the post command
 var postCmd = &cobra.Command{
 	Use:   "post",
 	Short: "Make a post request",
@@ -87,7 +62,7 @@ func postReq(urlReg, dataInc string) string {
 
 	if err != nil{
 		fmt.Println(err)
-		return ""
+		return "error"
 	}
 	defer response.Body.Close()
 
